@@ -1,7 +1,5 @@
 import streamlit
 
-import snowflake
-
 streamlit.title('My Mom\'s New Healthy Dinner')
 
 streamlit.header('Breakfast Favorites')
