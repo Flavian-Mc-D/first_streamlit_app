@@ -1,3 +1,2 @@
 # requierments.txt
-import snowflake 
-snowflake-connector-python-2.7.7
+snowflake-connector-python
