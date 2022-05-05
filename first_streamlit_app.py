@@ -1,5 +1,5 @@
 import streamlit
-import request
+import requests
 #Based on another user:
 #import streamlit
 #import pandas as pd
