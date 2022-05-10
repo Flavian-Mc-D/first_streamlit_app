@@ -49,7 +49,7 @@ my_fruit_list_2 = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.
 my_fruit_list_2 = my_fruit_list_2.set_index('Fruit')
 
 #Adding a pick list:
-fruits_selected_2 = streamlit.multiselect("Pick some fruits:", list(my_fruit_list_2.index),['Kiwi','Bannana'])
+#fruits_selected_2 = streamlit.multiselect("Pick some fruits:", list(my_fruit_list_2.index),['Kiwi','Bannana'])
 fruits_to_show_2 = my_fruit_list_2.loc[fruits_selected_2]
 
 #Display the table on the page
