@@ -45,8 +45,8 @@ streamlit.dataframe(fruityvice_normalized)
 
 streamlit.header('Would you like to pick another Fruit?')
 #Adding a second pick list:
-fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
-fruits_to_show = my_fruit_list.loc[fruits_selected]
+fruits_selected_2 = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
+fruits_to_show_2 = my_fruit_list.loc[fruits_selected_2]
 
 import snowflake.connector
 
