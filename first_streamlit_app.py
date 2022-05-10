@@ -45,8 +45,15 @@ streamlit.dataframe(fruityvice_normalized)
 
 streamlit.header('Would you like to pick another Fruit?')
 #Adding a second pick list:
-fruits_selected_2 = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
-fruits_to_show_2 = my_fruit_list.loc[fruits_selected_2]
+my_fruit_list_2 = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+my_fruit_list_2 = my_fruit_list_2.set_index('Fruit')
+
+#Adding a pick list:
+fruits_selected_2 = streamlit.multiselect("Pick some fruits:", list(my_fruit_list_2.index),['Avocado','Strawberries'])
+fruits_to_show_2 = my_fruit_list_2.loc[fruits_selected_2]
+
+#Display the table on the page
+streamlit.dataframe(fruits_to_show_2)
 
 import snowflake.connector
 
